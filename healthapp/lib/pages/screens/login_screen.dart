@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:healthapp/pages/screens/home_screen.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 10,
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Image.asset("images/doctor_login.jpg"),
               ),
               const SizedBox(
@@ -39,13 +39,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: TextField(
                   obscureText: passTogle ? true : false,
                   decoration: InputDecoration(
-                      label: Text("Enter Password"),
-                      prefixIcon: Icon(Icons.lock),
-                      border: OutlineInputBorder(),
+                      label:const  Text("Enter Password"),
+                      prefixIcon:const  Icon(Icons.lock),
+                      border: const OutlineInputBorder(),
                       suffixIcon: InkWell(
                           onTap: () {
                             if (passTogle == true) {
@@ -56,8 +56,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             setState(() {});
                           },
                           child: passTogle
-                              ? Icon(Icons.remove_red_eye_outlined)
-                              : Icon(Icons.remove_red_eye_sharp))),
+                              ?const Icon(Icons.remove_red_eye_outlined)
+                              :const  Icon(Icons.remove_red_eye_sharp))),
                 ),
               ),
               const SizedBox(
@@ -69,13 +69,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: double.infinity,
                   child: MaterialButton(
                     onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => LoginScreen(),
-                      ));
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //   builder: (context) =>const  HomeScreen(),
+                      // ));
                     },
                     child: Padding(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                          const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                       child: Text(
                         "Log In",
                         style: TextStyle(color: Colors.white, fontSize: 20),
@@ -89,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Do'nt have any you Account?"),
+                  const Text("Don't have any you Account?"),
                   TextButton(onPressed: (){}, child: Text("Create Account"))
 
               ],)
